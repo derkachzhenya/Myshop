@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "121ea3a2fffe49b3ef9aa4d064b28c19",
+    "content-hash": "06d10c24f3dac9a730b11386db7e8617",
     "packages": [
         {
             "name": "brick/math",
@@ -61,6 +61,56 @@
                 }
             ],
             "time": "2022-08-10T22:54:19+00:00"
+        },
+        {
+            "name": "dd4you/dpanel",
+            "version": "v1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DD4You/laravel-dpanel.git",
+                "reference": "e5230f089dbf3b5cbb3988c2a103acb29e94b8fa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DD4You/laravel-dpanel/zipball/e5230f089dbf3b5cbb3988c2a103acb29e94b8fa",
+                "reference": "e5230f089dbf3b5cbb3988c2a103acb29e94b8fa",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "DD4You\\Dpanel\\DpanelServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "DD4You\\Dpanel\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vinay Singh",
+                    "email": "vinay@dd4you.in"
+                }
+            ],
+            "description": "This is Admin Panel By DD4You.in with tailwind css. It's help to create admin panel with prebuild login system",
+            "keywords": [
+                "admin panel",
+                "dpanel",
+                "laravel",
+                "tailwind css"
+            ],
+            "support": {
+                "issues": "https://github.com/DD4You/laravel-dpanel/issues",
+                "source": "https://github.com/DD4You/laravel-dpanel/tree/v1.2.1"
+            },
+            "time": "2023-02-23T01:20:55+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
