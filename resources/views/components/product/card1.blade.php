@@ -1,4 +1,4 @@
-<div class="bg-white rounded-lg shadow-lg p-3 relative">
+<a href="{{ route('product_detail') }}" class="bg-white rounded-lg shadow-lg p-3 relative">
     <img class="mx-auto" src="{{ asset('images/product-1.png') }}" alt="">
 
     <div class="flex justify-between gap-3 my-3">
@@ -22,15 +22,15 @@
         </div>
     </div>
 
+    <div class="flex justify-between items-center">
+        <span class="text-gray-400"><i class='bx bx-star'></i>1.5</span>
+        <span class="text-violet-600 flex items-center font-bold"><i class='bx bx-cart-add text-xl'></i>Buy now</span>
+    </div>
 
-<div class="flex justify-between items-center">
-    <span class="text-gray-400"><i class='bx bx-star'></i>1.5</span>
-    <span class="text-violet-600 flex items-center font-bold"><i class='bx bx-cart-add text-xl' ></i>Buy now</span>
-</div>
+    <div class="absolute top-2 left-3 right-3 flex justify-between items-center">
+        <span class="bg-red-500 text-white rounded px-2 text-xs">25% off</span>
+        <span class="bg-white shadow-md rounded-full w-7 h-7 flex items-center justify-center"><i
+                class='bx bx-heart text-xl'></i></span>
+    </div>
 
-<div class="absolute top-2 left-3 right-3 flex justify-between items-center">
-<span class="bg-red-500 text-white rounded px-2 text-xs">25% off</span>
-<span class="bg-white shadow-md rounded-full w-7 h-7 flex items-center justify-center"><i class='bx bx-heart text-xl' ></i></span>
-</div>
-
-</div>
+</a>
