@@ -18,7 +18,7 @@
 
 <body class="bg-[#FBFBFB]">
     <div class="flex justify-between items-center px-6 md:px-20 mt-4 bg-white shadow py-2">
-        <img class="w-12 h-12" src="{{ asset('images/logo.png') }}" alt="">
+        <a href="/public"><img class="w-12 h-12" src="{{ asset('images/logo.png') }}" alt=""></a>
 
         <div class="text-2xl relative">
             <i class='bx bx-heart'></i>
