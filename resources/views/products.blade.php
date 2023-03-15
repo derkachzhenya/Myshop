@@ -48,8 +48,10 @@
         <section class="mt-6 grid grid-cols-1 md:grid-cols-5 gap-6">
 
             {{-- Filters --}}
-            <div class="p-3 rounded border border-slate-300">
+           <div>
+            <div class="w-full md:w-auto p-3 rounded border border-slate-300">
                 <h3 class="text-xl font-bold text-violet-600 uppercase">Filter</h3>
+           </div>
                 {{-- Price --}}
                 <div>
                     <h4 class="text-gray-800 font-medium mb-1">Price</h4>
@@ -94,28 +96,51 @@
                     <h4 class="text-gray-800 font-medium mb-1">Color</h4>
                     <ul class="text-gray-400 text-sm flex flex-col gap-1">
                         <li class="flex gap-2"><input type="checkbox" name="" id="color">
-                            <label for="color">  
+                            <label for="color">
                                 <span style="background-color: #acacac" class="w-4 h-4 flex rounded-full">&nbsp;</span>
-                            </label> 
+                            </label>
                         </li>
                         <li class="flex gap-2"><input type="checkbox" name="" id="color2">
-                            <label for="color2">  
+                            <label for="color2">
                                 <span style="background-color: #cc00ff" class="w-4 h-4 flex rounded-full">&nbsp;</span>
-                            </label> 
+                            </label>
                         </li>
                         <li class="flex gap-2"><input type="checkbox" name="" id="color3">
-                            <label for="color3">  
+                            <label for="color3">
                                 <span style="background-color: #0048a7" class="w-4 h-4 flex rounded-full">&nbsp;</span>
-                            </label> 
+                            </label>
                         </li>
                     </ul>
                 </div>
-                <hr class="mt-2">
+                <hr class="my-2">
+
+                <div class="flex items-center justify-between">
+                    <button class="bg-violet-400 rounded-md text-white uppercase text-center py-0.5 px-4">Apply
+                        Filter</button>
+                    <span><i class='bx bx-filter-alt text-gray-400 text-xl'></i></span>
+                </div>
             </div>
-            
+
 
             {{-- Products --}}
-            <div class="col-span-4 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="md:col-span-4 grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <div class="md:col-span-2 flex items-center px-1.5 text-sm rounded border border-slate-300">
+                    <span class="w-6 border-r border-slate-300">
+                        <i class='bx bx-search text-xl text-gray-400'></i>
+                    </span>
+                    <input type="search" placeholder="Search 10000+Products"
+                        class="py-1 pl-1.5 w-full bg-transparent focus:outline-none">
+                </div>
+                <div class=" flex items-center px-1.5 text-sm rounded border border-slate-300">
+                    <span class="w-6 border-r border-slate-300">
+                        <i class='bx bx-filter text-xl text-gray-400'></i>
+                    </span>
+                    <select class="py-1 pl-1.5 w-full bg-transparent focus:outline-none">
+                        <option value="">Popular</option>
+                    </select>
+                </div>
+
                 @foreach (range(1, 12) as $item)
                     <x-product.card1 />
                 @endforeach
