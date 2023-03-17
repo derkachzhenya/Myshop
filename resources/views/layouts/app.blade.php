@@ -13,7 +13,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- Styles -->
-@stack('css')
+    @stack('css')
 </head>
 
 <body class="bg-[#FBFBFB]">
@@ -21,16 +21,16 @@
         <a href="/public"><img class="w-12 h-12" src="{{ asset('images/logo.png') }}" alt=""></a>
 
         <div class="text-2xl relative">
-           <a href="{{route('wishlist')}}"> <i class='bx bx-heart'></i></a>
-            <i class='bx bx-user'></i>
-            <a href="{{route('cart')}}"><i class='bx bx-cart'></i></a>
+            <a href="{{ route('wishlist') }}"> <i class='bx bx-heart'></i></a>
+            <a href="{{ route('account') }}"> <i class='bx bx-user'></i></a>
+            <a href="{{ route('cart') }}"><i class='bx bx-cart'></i></a>
             <span
                 class=" absolute top-0 -right-2.5 bg-indigo-600 rounded-full w-4 h-4 text-xs text-white text-center">25</span>
         </div>
     </div>
 
 
-<main>@yield('body_content')</main>
+    <main>@yield('body_content')</main>
 
     <footer class="px-8 md:px-20 mt-8 bg-white">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -73,7 +73,8 @@
     </footer>
 
     <script src="{{ asset('js/jquery-3.6.3.min.js') }}"></script>
-  
+
     @stack('scripts')
 </body>
+
 </html>
