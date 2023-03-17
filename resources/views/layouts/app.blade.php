@@ -21,9 +21,9 @@
         <a href="/public"><img class="w-12 h-12" src="{{ asset('images/logo.png') }}" alt=""></a>
 
         <div class="text-2xl relative">
-            <i class='bx bx-heart'></i>
+           <a href="{{route('wishlist')}}"> <i class='bx bx-heart'></i></a>
             <i class='bx bx-user'></i>
-            <i class='bx bx-cart'></i>
+            <a href="{{route('cart')}}"><i class='bx bx-cart'></i></a>
             <span
                 class=" absolute top-0 -right-2.5 bg-indigo-600 rounded-full w-4 h-4 text-xs text-white text-center">25</span>
         </div>
