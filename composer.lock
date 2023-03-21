@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "06d10c24f3dac9a730b11386db7e8617",
+    "content-hash": "8cb47cdca6af5db8efb8998a4b1e0385",
     "packages": [
         {
             "name": "brick/math",
@@ -64,16 +64,16 @@
         },
         {
             "name": "dd4you/dpanel",
-            "version": "v1.2.1",
+            "version": "v1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/DD4You/laravel-dpanel.git",
-                "reference": "e5230f089dbf3b5cbb3988c2a103acb29e94b8fa"
+                "reference": "1207add2e1a79cf32c6abce0ac11f9d6d283a578"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DD4You/laravel-dpanel/zipball/e5230f089dbf3b5cbb3988c2a103acb29e94b8fa",
-                "reference": "e5230f089dbf3b5cbb3988c2a103acb29e94b8fa",
+                "url": "https://api.github.com/repos/DD4You/laravel-dpanel/zipball/1207add2e1a79cf32c6abce0ac11f9d6d283a578",
+                "reference": "1207add2e1a79cf32c6abce0ac11f9d6d283a578",
                 "shasum": ""
             },
             "type": "library",
@@ -81,10 +81,16 @@
                 "laravel": {
                     "providers": [
                         "DD4You\\Dpanel\\DpanelServiceProvider"
-                    ]
+                    ],
+                    "aliases": {
+                        "Setting": "DD4You\\Dpanel\\Facades\\Setting"
+                    }
                 }
             },
             "autoload": {
+                "files": [
+                    "src/Helpers/settingsHelper.php"
+                ],
                 "psr-4": {
                     "DD4You\\Dpanel\\": "src/"
                 }
@@ -108,9 +114,9 @@
             ],
             "support": {
                 "issues": "https://github.com/DD4You/laravel-dpanel/issues",
-                "source": "https://github.com/DD4You/laravel-dpanel/tree/v1.2.1"
+                "source": "https://github.com/DD4You/laravel-dpanel/tree/v1.3.1"
             },
-            "time": "2023-02-23T01:20:55+00:00"
+            "time": "2023-03-16T03:20:03+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
