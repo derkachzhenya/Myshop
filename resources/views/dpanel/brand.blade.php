@@ -1,13 +1,13 @@
 @extends('dpanel.layouts.app')
 
-@section('title', 'Categories')
+@section('title', 'Brands')
 
 @push('scripts')
     <script>
-        const editCategory = (id, name, status) => {
-            document.getElementById("edit-form").action = '/dpanel/category/' + id;
-            document.getElementById('category-name').value = name;
-            document.getElementById('category-status').value = status;
+        const editBrand = (id, name, status) => {
+            document.getElementById('edit-form').action = '/dpanel/brand/' + id;
+            document.getElementById('brand-name').value = name;
+            document.getElementById('brand-status').value = status;
             showBottomSheet('bottomSheetUpdate')
         }
     </script>
@@ -16,7 +16,7 @@
 @section('body_content')
 
     <div class="bg-gray-800 flex justify-between items-center rounded-l pl-2 mb-3">
-        <p class="text-white font-medium text-lg">Categories</p>
+        <p class="text-white font-medium text-lg">Brands</p>
         <button onclick="showBottomSheet('bottomSheet')" class="bg-violet-500 py-1 px-2 rounded-r ">Create</button>
         {{-- <a href="{{ route('dpanel.category.create') }}">Create</a> --}}
     </div>
@@ -80,7 +80,7 @@
 
                                     <td class="flex px-4 py-3 justify-center text-lg">
                                         <button
-                                            onclick="editCategory('{{ $item->id }}', '{{ $item->name }}', '{{ $item->is_active }}')"
+                                            onclick="editBrand('{{ $item->id }}', '{{ $item->name }}', '{{ $item->is_active }}')"
                                             class="ml-1 text-blue-500 bg-blue-100 focus:outline-none border border-blue-500 rounded-full w-8 h-8 flex justify-center items-center">
                                             <i class='bx bx-edit'></i>
                                         </button>
@@ -95,19 +95,19 @@
         {{ $data->links() }}
     </div>
 
-    <x-dpanel::modal.bottom-sheet sheetId="bottomSheet" title="New Category">
+    <x-dpanel::modal.bottom-sheet sheetId="bottomSheet" title="New Brand">
         <div class="flex justify-center items-center min-h-[30vh] md:min-h-[50vh]">
-            <form action="{{ route('dpanel.category.store') }}" method="post">
+            <form action="{{ route('dpanel.brand.store') }}" method="post">
                 @csrf
                 <div class="grid grid-cols-1  gap-3">
                     <div>
-                        <label>Category Name <span class="text-red-500 font-bold">*</span></label>
-                        <input type="text" name="name" maxlength="255" required placeholder="Enter Category Name"
+                        <label>Brand Name <span class="text-red-500 font-bold">*</span></label>
+                        <input type="text" name="name" maxlength="255" required placeholder="Enter Brand Name"
                             class="w-full bg-transparent border border-gray-500 rounded py-0.5 px-2 focus:outline-none">
                     </div>
                     <div class="text-center">
                         <button class="bg-indigo-500 text-center text-white py-1 px-2 rounded shadow-md uppercase">Create
-                            New Category</button>
+                            New Brand</button>
                     </div>
                 </div>
             </form>
@@ -115,23 +115,23 @@
     </x-dpanel::modal.bottom-sheet>
 
 
-    <x-dpanel::modal.bottom-sheet sheetId="bottomSheetUpdate" title="Update Category">
+    <x-dpanel::modal.bottom-sheet sheetId="bottomSheetUpdate" title="Update Brand">
         <div class="flex justify-center items-center min-h-[30vh] md:min-h-[50vh]">
             <form id="edit-form" action="" method="post">
                 @csrf
                 @method('PATCH')
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
                     <div>
-                        <label>Category Name <span class="text-red-500 font-bold">*</span></label>
-                        <input type="text" id="category-name" name="name" maxlength="255" required
-                            placeholder="Enter Category Name"
+                        <label>Brand Name <span class="text-red-500 font-bold">*</span></label>
+                        <input type="text" id="brand-name" name="name" maxlength="255" required
+                            placeholder="Enter Brand Name"
                             class="w-full bg-transparent border border-gray-500 rounded py-0.5 px-2 focus:outline-none">
                     </div>
 
                     <div>
-                        <label>Category Status</label>
-                        <select name="is_active" id="category-status" 
-                            class="w-full bg-gray-800 border border-gray-500 rounded py-0.5 px-2 focus:outline-none">
+                        <label>Brand Status</label>
+                        <select name="is_active" id="brand-status" 
+                            class="w-full border border-gray-500 rounded py-0.5 px-2 focus:outline-none">
                             <option value="1">Active</option>
                             <option value="0">Not Active</option>
                         </select>
@@ -139,8 +139,8 @@
 
                     <div>
                         <label>&nbsp;</label>
-                        <button class="w-full bg-indigo-500 text-center text-white py-1 px-2 rounded shadow-md uppercase">Create
-                            Update Category</button>
+                        <button class="w-full bg-indigo-500 text-center text-white py-1 px-2 rounded shadow-md uppercase">
+                            Update Brand</button>
                     </div>
                 </div>
             </form>
