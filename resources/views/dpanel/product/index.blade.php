@@ -50,7 +50,7 @@
                                 <tr>
                                     <td class="pl-3 py-1">
                                         <div class="text-sm text-gray-200">
-                                            {{ $date->perPage() * ($data->currentPage() - 1) + $loop->iteration }}</div>
+                                            {{ $data->perPage() * ($data->currentPage() - 1) + $loop->iteration }}</div>
                                     </td>
 
                                     <td class="pl-3 py-3">
