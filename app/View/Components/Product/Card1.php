@@ -9,9 +9,11 @@ use Illuminate\View\Component;
 class Card1 extends Component
 {
    
-    public function __construct()
+   public $product;
+   
+    public function __construct($product)
     {
-        //
+        $this->product=$product;
     }
 
    

@@ -256,7 +256,7 @@
         </section>
 
 
-        <button class="bg-indigo-500 text-center text-white font-medium w-full py-1 rounded shadow-md">Add New
+        <button class="bg-indigo-500 text-center text-white font-medium w-full py-1 rounded shadow-md">Update
             Product</button>
 
     </form>

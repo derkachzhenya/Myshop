@@ -4,29 +4,29 @@
     <link rel="stylesheet" href="{{ asset('css/owl.theme.default.css') }}">
 @endpush
 @push('scripts')
-<script src="{{ asset('js/owl.carousel.min.js') }}"></script>
-<script>
-    $(document).ready(function() {
-        $(".owl-carousel").owlCarousel({
-            loop: true,
-            margin: 10,
-            nav: false,
-            dots: false,
-            responsiveClass: true,
-            responsive: {
-                0: {
-                    items: 1,
-                },
-                600: {
-                    items: 1,
-                },
-                1000: {
-                    items: 1,
+    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            $(".owl-carousel").owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: false,
+                dots: false,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    600: {
+                        items: 1,
+                    },
+                    1000: {
+                        items: 1,
+                    }
                 }
-            }
+            });
         });
-    });
-</script>
+    </script>
 @endpush
 @section('body_content')
     <div>
@@ -42,8 +42,10 @@
     <section class="px-8 md:px-20 mt-6">
         <h3 class="text-gray-800 font-medium mb-2">Flesh sale</h3>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-            @foreach (range(1, 4) as $item)
-                <x-product.card1 />
+            @foreach ($products as $item)
+                @if ($item->variant->isNotEmpty())
+                    <x-product.card1 :product="$item" />
+                @endif
             @endforeach
         </div>
     </section>
@@ -70,11 +72,13 @@
                 <h3 class="text-gray-800 font-medium underline mb-2">Best seller</h3>
                 <h3 class="text-gray-800 font-medium mb-2">New Product</h3>
             </div>
-            <a hreff="{{route('products')}}" class="text-violet-600 font-medium mb-2">All Product</a>
+            <a hreff="{{ route('products') }}" class="text-violet-600 font-medium mb-2">All Product</a>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-            @foreach (range(1, 12) as $item)
-                <x-product.card1 />
+           @foreach ($products as $item)
+                @if ($item->variant->isNotEmpty())
+                    <x-product.card1 :product="$item" />
+                @endif
             @endforeach
         </div>
     </section>

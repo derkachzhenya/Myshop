@@ -69,7 +69,7 @@
                     <span class="text-gray-400 text-sm"><i class='bx bx-star'></i>4.8</span>
                 </div>
                 {{-- Name, SKU, Brand --}}
-                <h2 class="text-lg font-medium text-gray-800">Men Blue Shirt</h2>
+                <h2 class="text-lg font-medium text-gray-800">{{$products->title}}</h2>
                 <div class="text-sm text-gray-800">
                     <p><span class="text-gray-400">SKU: </span>FK-00001</p>
                     <p><span class="text-gray-400">Brand: </span>Brandname</p>
@@ -141,9 +141,9 @@
         <section class=" mt-6">
             <h3 class="text-gray-800 font-medium mb-2">Featured Products</h3>
             <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                @foreach (range(1, 12) as $item)
+                {{--@foreach (range(1, 12) as $item)
                     <x-product.card1 />
-                @endforeach
+                @endforeach--}}
             </div>
         </section>
     </section>
