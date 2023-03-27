@@ -17,7 +17,6 @@ class HomeController extends Controller
             }
         ])->latest()->limit(12)->get();
 
-        //return $products;
         return view('welcome', compact('products'));
     }
 
@@ -40,7 +39,7 @@ class HomeController extends Controller
             }
         ])->latest()->limit(12)->get();
 
-
+        
         return view('product_detail', compact('products', 'product'));
     }
 }

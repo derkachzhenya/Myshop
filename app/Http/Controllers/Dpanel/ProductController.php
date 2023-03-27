@@ -161,6 +161,7 @@ class ProductController extends Controller
             $variant->save();
         }
 
+        if($request->images) {
         foreach ($request->images as $key => $image) {
 
             if (isset($request->image_ids[$key])) {
@@ -174,7 +175,7 @@ class ProductController extends Controller
                 $productImage->path = $image->store('media', 'public');
                 $productImage->save();
             }
-
+        }
            
         }
 

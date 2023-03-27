@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(HomeController::class)->group(function(){
 Route::get('/', 'index')->name('landing-page');
-Route::view('/pd/{slug}', 'product_detail')->name('product_detail');
+Route::get('/pd/{slug}', 'productDetail')->name('product_detail');
 });
 
 //Route::view('/pd/slug', 'product_detail')->name('product_detail');

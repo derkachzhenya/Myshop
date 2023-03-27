@@ -198,7 +198,7 @@
                 <label>Selling Prime / Unit</label>
                 <input type="number" name="selling_price[]" value="{{ $variantItem->selling_price }}"
                     placeholder="Enter Selling Price"
-                    class="w-full  border border-gray-700 rounded py-0.5 px-2 focus:outline-none">
+                    class="w-full  border border-gray-700 rounded py-0.5 px-2 focus:outline-none" required>
             </div>
 
             <div>
@@ -245,9 +245,9 @@
                     <label for="img-1"
                         class="flex items-center justify-center bg-white rounded-md shadow-md p-1 cursor-pointer">
                         <input type="file" id="img-1" name="images[]" onchange="setImagePreview(this,event)"
-                            accept="image/*" class="hidden" required>
+                            accept="image/*" class="hidden">
                         <img src="https://placehold.jp/400x600.png?text=Add%20image"
-                            class="required-md aspect-[2/3] object-cover" alt="">
+                            class="rounded-md aspect-[2/3] object-cover" alt="">
                     </label>
                
                 </div>

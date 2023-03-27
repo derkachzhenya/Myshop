@@ -225,7 +225,7 @@
                         <input type="file" id="img-1" name="images[]" onchange="setImagePreview(this,event)"
                             accept="image/*" class="hidden" required>
                         <img src="https://placehold.jp/400x600.png?text=Add%20image"
-                            class="required-md aspect-[2/3] object-cover" alt="">
+                            class="rounded-md aspect-[2/3] object-cover" alt="">
                     </label>
                 </div>
 
